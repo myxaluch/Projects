@@ -3,8 +3,12 @@
 
 def factorial value
   res = 1.0
-  (1..value).each do |n|
-    res *= n
+  if value == 0
+    return res
+  else
+    (1..value).each do |n|
+      res *= n
+    end
   end
   return res
 end
