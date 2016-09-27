@@ -14,7 +14,7 @@ def factorial value
 end
 
 
-puts "Generate E.\nEnter the number of decimal places.( Between 0 and 15)"
+puts "Generate E.\nEnter the number of decimal places.(Between 0 and 15)"
 places = gets.chomp.to_i
 if  places >=0 && places <= 15
   e = 0.0

@@ -1,6 +1,6 @@
 # Generate Pi with given precision using BBP formula
 
-puts "Generate PI.\nEnter the number of decimal places.( Between 0 and 15)"
+puts "Generate PI.\nEnter the number of decimal places.(Between 0 and 15)"
 places = gets.chomp.to_i
 if  places >=0 && places <= 15
   pi = 0.0
