@@ -4,7 +4,7 @@
 puts "Generate Fibonacci sequence.\nEnter the n of Fn"
 number = gets.chomp.to_i
 
-if number < 0 
+if number < 0
     puts "Enter correct value of n"
 else
     sqr_five = Math.sqrt(5)
@@ -13,6 +13,3 @@ else
         printf("F%d = %1.f ", n, f)
     end
 end
-
-
-
