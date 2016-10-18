@@ -1,11 +1,3 @@
-## Main file for include all packages
+## Main file for include all packages and general function
 require_relative 'Modules/Numbers'
 include Numbers
-
-begin
-  loop do
-    print "Enter, what you want:"
-    case
-  end
-rescue
-end
