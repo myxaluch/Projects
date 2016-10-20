@@ -5,7 +5,11 @@ require_relative 'Ruby/Main' # Main file for include all modules
 begin
   loop do
     puts "Choose the algo:"
-    puts "(1) - Pi algorithm\n(2) - E  algorithm\n(3) - Fibonacci\n(0) - EXIT"
+    puts "(1) - Pi algorithm\n
+(2) - E  algorithm\n
+(3) - Fibonacci\n
+(4) - Prime Factorization\n
+(0) - EXIT"
     choice = gets.chomp.to_i
     case choice
     when 1
@@ -24,6 +28,14 @@ begin
         printf("F%d = %1.f ", val, res[val])
       end
       printf("\n")
+    when 4
+      puts "Enter correct value of number ( > 0 )"
+      n = gets.chomp.to_i
+      res = prime_factor n
+      (0...res.length).each do |val|
+        printf("%d * ", res[val])
+      end
+      printf("1\n")
     when 0
       break
     end

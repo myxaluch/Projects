@@ -56,4 +56,37 @@ module Numbers
     return res
   end
 
+
+  def prime_factor number
+    res = []
+    temp_value = number
+    while temp_value != 1
+      puts temp_value
+      if ( temp_value % 2 == 0 )
+        res.push(2)
+        temp_value /= 2
+        next
+      end
+      if ( temp_value % 3 == 0 )
+        res.push(3)
+        temp_value /= 3
+        next
+      end
+      ( 1..(number / 6).floor ).each do |x|
+        tmp = (6 * x - 1)
+        if (temp_value % tmp == 0)
+          res.push(tmp)
+          temp_value /= tmp
+          break
+        end
+        tmp = (6 * x + 1)
+        if (temp_value % tmp == 0)
+          res.push(tmp)
+          temp_value /= tmp
+          break
+        end
+      end
+    end
+    return res
+  end
 end
