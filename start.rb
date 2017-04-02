@@ -10,6 +10,7 @@ begin
 (3) - Fibonacci\n
 (4) - Prime Factorization\n
 (5) - Next Prime\n
+(6) - Collatz Conjecture\n
 (0) - EXIT"
     choice = gets.chomp.to_i
     case choice
@@ -52,6 +53,13 @@ begin
           break
         end
       end
+    when 6
+      puts "Enter the value"
+      value = gets.chomp.to_i
+      result = ClassicAlgorithms.collatz_conjecture(value)
+      print "Temp values = #{result}\n"
+      puts "Count steps = #{result.size}"
+      puts "Max value = #{result.max}"
     when 0
       break
     end
